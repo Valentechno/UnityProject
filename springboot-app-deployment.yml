@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: springappcontainer
-        image: legah2045/springboot-app
+        image: valentechno/sbu-project
         ports:
         - containerPort: 8080
         env:
