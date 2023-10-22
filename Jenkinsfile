@@ -2,7 +2,6 @@ node
 {
 def mavenHome = tool name: "maven3.9.5"
 
-stages {
     stage('Maven Build')
     {
         sh "${mavenHome}/bin/mvn clean package"
@@ -54,4 +53,3 @@ stages {
  }
  
  }
-}
