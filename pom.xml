@@ -18,6 +18,9 @@
 		<spring-boot.version>2.1.5.RELEASE</spring-boot.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
+		<sonar.host.url>http:52.91.45.59:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>Gunsling949712!</sonar.password>
 	</properties>
 
 	<dependencyManagement>
@@ -83,6 +86,20 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+	      <name>Releases Nexus Repository</name>
+	      <url>http://3.92.223.146:8081/repository/Project1repo/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Snapshot Nexus Repository</name>
+	      <url>http://3.92.223.146:8081/repository/Project1SnapshotRepo/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
