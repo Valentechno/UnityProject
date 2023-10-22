@@ -2,6 +2,11 @@ node
 {
 def mavenHome = tool name: "maven3.9.5"
 
+    stage('Git Clone')
+    {
+        git credentialsId: 'git_hub_login', url: 'https://github.com/Valentechno/UnityProject.git'
+    }
+    
     stage('Maven Build')
     {
         sh "${mavenHome}/bin/mvn clean package"
